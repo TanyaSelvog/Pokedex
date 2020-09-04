@@ -22,14 +22,15 @@ const getPokemon = async (id: number): Promise<void> => {
       .map((poke: any) => poke.type.name)
       .join(", ") 
 
-const transformedPokemon = {
-    id: pokemon.id,
-    name: pokemon.name,
-    image: '${pokemon.sprites.front_detail}', 
-    type: pokemonType,
-}
 
-showPokemon(transformedPokemon)
+      const transformedPokemon = {
+        id: pokemon.id,
+        name: pokemon.name,
+        image: `${pokemon.sprites.front_default}`,
+        type: pokemonType,
+      }
+
+    showPokemon(transformedPokemon)
 }
 
 const showPokemon = (pokemon: IPokemon): void => {

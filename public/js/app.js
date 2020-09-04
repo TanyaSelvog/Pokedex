@@ -58,7 +58,7 @@ var getPokemon = function (id) { return __awaiter(void 0, void 0, void 0, functi
                 transformedPokemon = {
                     id: pokemon.id,
                     name: pokemon.name,
-                    image: '${pokemon.sprites.front_detail}',
+                    image: "" + pokemon.sprites.front_default,
                     type: pokemonType,
                 };
                 showPokemon(transformedPokemon);
